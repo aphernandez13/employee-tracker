@@ -1,14 +1,14 @@
 const mysql = require("mysql");
 const inquirer = require("inquirer");
-
+//calls in my sql
 const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
+  password: "root",
   database: "employees",
 });
-
+//creats real connection
 connection.connect(function (err) {
   if (err) throw err;
   initPrompt();
